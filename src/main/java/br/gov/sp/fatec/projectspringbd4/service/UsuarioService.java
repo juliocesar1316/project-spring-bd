@@ -10,7 +10,7 @@ import br.gov.sp.fatec.projectspringbd4.entity.Usuario;
 import br.gov.sp.fatec.projectspringbd4.repository.UsuarioRepository;
 
 @Service
-public class UsuarioService {
+public class UsuarioService implements IUsuarioService {
     
     @Autowired
     private UsuarioRepository usuarioRepo;
