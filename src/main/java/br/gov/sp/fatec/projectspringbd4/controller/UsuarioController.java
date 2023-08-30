@@ -21,19 +21,19 @@ public class UsuarioController {
     
     @Autowired
     private IUsuarioService service;
-
+    
     @GetMapping
-    public List<Usuario> buscarTodos(){
-        return service.buscarTodos();
+    public List<Usuario> todosUsuarios() {
+        return service.buscarTodosUsuarios();
     }
 
     @PostMapping
-    public Usuario novoUsuario( @RequestBody Usuario usuario){
+    public Usuario novoUsuario(@RequestBody Usuario usuario) {
         return service.novoUsuario(usuario);
     }
 
     @GetMapping(value = "/{id}")
-    public Usuario buscarPorId(@PathVariable("id") Long id){
-        return service.buscarPorId(id);
+    public Usuario buscarPorId(@PathVariable("id") Long id) {
+        return service.buscarUsuarioPorId(id);
     }
 }
